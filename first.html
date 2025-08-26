@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <title>Med Fusion - Diagnosis</title>
+</head>
+<body>
+  <div class="header1">
+    <h2><i class="fas fa-stethoscope"></i>  Med Fusion</h2>
+    <p>Multi-Disease Prediction Using Data Science</p>
+  </div>
+  <div class="navbar">
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-phone"></i> Contact</a>
+    <a href="#"><i class="fas fa-comment"></i> Feedback</a>
+    <a href="#"><i class="fas fa-info-circle"></i> About</a>
+  </div>
+<div class="search-container">
+  <div class="search-wrapper">
+    <input 
+      type="text" 
+      id="search-bar" 
+      list="symptom-list" 
+      placeholder="Search symptoms or categories...">
+      <datalist id="symptom-list"></datalist>
+    <span class="search-icon">&#x1F50D;</span>
+  </div>
+</div>
+
+  <div class="container1">
+      <form onsubmit="sendCheckboxValues(event)">
+        <details>
+          <summary><i class="fas fa-bone" style="color: #FF5733;"></i> Musculoskeletal System</summary>
+            <div>
+                  
+                <label><input type="checkbox" name="options" value="Muscle Weakness"> Muscle Weakness</label>
+          <label><input type="checkbox" name="options" value="Stiff Neck"> Stiff Neck</label>
+          <label><input type="checkbox" name="options" value="Swelling Joints"> Swelling Joints</label>
+          <label><input type="checkbox" name="options" value="Movement Stiffness"> Movement Stiffness</label>
+          <label><input type="checkbox" name="options" value="Painful Walking"> Painful Walking</label>
+          <label><input type="checkbox" name="options" value="Muscle Pain"> Muscle Pain</label>
+          <label><input type="checkbox" name="options" value="Knee Pain"> Knee Pain</label>
+          <label><input type="checkbox" name="options" value="Hip Joint Pain"> Hip Joint Pain</label>
+          <label><input type="checkbox" name="options" value="Neck Pain"> Neck Pain</label>
+          <label><input type="checkbox" name="options" value="Back Pain"> Back Pain</label>
+          <label><input type="checkbox" name="options" value="Muscle Wasting"> Muscle Wasting</label>
+          <label><input type="checkbox" name="options" value="Weakness in Limbs"> Weakness in Limbs</label>
+          <label><input type="checkbox" name="options" value="Joint Pain"> Joint Pain</label>
+          
+          </details>
+          
+                  <details>
+                    <summary><i class="fas fa-brain" style="color: #8E44AD;"></i> Nervous System</summary>
+            <div>
+                <label><input type="checkbox" name="options" value="Cramps"> Cramps</label>
+                <label><input type="checkbox" name="options" value="Dizziness"> Dizziness</label>
+                <label><input type="checkbox" name="options" value="Irritability"> Irritability</label>
+                <label><input type="checkbox" name="options" value="Restlessness"> Restlessness</label>
+                <label><input type="checkbox" name="options" value="Depression"> Depression</label>
+                <label><input type="checkbox" name="options" value="Headache"> Headache</label>
+                <label><input type="checkbox" name="options" value="Spinning Movements"> Spinning Movements</label>
+                <label><input type="checkbox" name="options" value="Loss of Balance"> Loss of Balance</label>
+                <label><input type="checkbox" name="options" value="Altered Sensorium"> Altered Sensorium</label>
+                <label><input type="checkbox" name="options" value="Slurred Speech"> Slurred Speech</label>
+                <label><input type="checkbox" name="options" value="Weakness of One Body Side"> Weakness of One Body Side</label>
+                <label><input type="checkbox" name="options" value="Lack of Concentration"> Lack of Concentration</label>
+                <label><input type="checkbox" name="options" value="Mood Swings"> Mood Swings</label>
+                <label><input type="checkbox" name="options" value="Anxiety"> Anxiety</label>
+                <label><input type="checkbox" name="options" value="Unsteadiness"> Unsteadiness</label>
+            </div>
+          </details>
+          
+          <details>
+            <summary><i class="fas fa-spa" style="color: #FF8C00;"></i> Skin and Hair</summary>
+            <div>
+                <label><input type="checkbox" name="options" value="Blackheads"> Blackheads</label>
+                <label><input type="checkbox" name="options" value="Scarring"> Scarring</label>
+                <label><input type="checkbox" name="options" value="Skin Rash"> Skin Rash</label>
+                <label><input type="checkbox" name="options" value="Silver Like Dusting"> Silver Like Dusting</label>
+                <label><input type="checkbox" name="options" value="Skin Peeling"> Skin Peeling</label>
+                <label><input type="checkbox" name="options" value="Small Dents in Nails"> Small Dents in Nails</label>
+                <label><input type="checkbox" name="options" value="Blisters"> Blisters</label>
+                <label><input type="checkbox" name="options" value="Red Sore Around Nose"> Red Sore Around Nose</label>
+                <label><input type="checkbox" name="options" value="Nodal Skin Eruptions"> Nodal Skin Eruptions</label>
+                <label><input type="checkbox" name="options" value="Yellowish Skin"> Yellowish Skin</label>
+                <label><input type="checkbox" name="options" value="Ulcers on Tongue"> Ulcers on Tongue</label>
+                <label><input type="checkbox" name="options" value="Inflammatory Nails"> Inflammatory Nails</label>
+                <label><input type="checkbox" name="options" value="Patches in Throat"> Patches in Throat</label>
+                <label><input type="checkbox" name="options" value="Drying and Tingling Lips"> Drying and Tingling Lips</label>
+                <label><input type="checkbox" name="options" value="Pus Filled Pimples"> Pus Filled Pimples</label>
+                <label><input type="checkbox" name="options" value="Dischromic Patches"> Dischromic Patches</label>
+                <label><input type="checkbox" name="options" value="Yellow Crust Ooze"> Yellow Crust Ooze</label>
+                <label><input type="checkbox" name="options" value="Red Spots Over Body"> Red Spots Over Body</label>
+                <label><input type="checkbox" name="options" value="Itching"> Itching</label>
+                <label><input type="checkbox" name="options" value="Bruising"> Bruising</label>
+                <label><input type="checkbox" name="options" value="Internal Itching"> Internal Itching</label>
+            </div>
+          </details>
+            <details>
+              <summary><i class="fas fa-utensils" style="color: #E67E22;"></i> Digestive System</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Stomach Pain"> Stomach Pain</label>
+                    <label><input type="checkbox" name="options" value="Acidity"> Acidity</label>
+                    <label><input type="checkbox" name="options" value="Vomiting"> Vomiting</label>
+                    <label><input type="checkbox" name="options" value="Indigestion"> Indigestion</label>
+                    <label><input type="checkbox" name="options" value="Constipation"> Constipation</label>
+                    <label><input type="checkbox" name="options" value="Acute Liver Failure"> Acute Liver Failure</label>
+                    <label><input type="checkbox" name="options" value="Abdominal Pain"> Abdominal Pain</label>
+                    <label><input type="checkbox" name="options" value="Diarrhoea"> Diarrhoea</label>
+                    <label><input type="checkbox" name="options" value="Nausea"> Nausea</label>
+                    <label><input type="checkbox" name="options" value="Loss of Appetite"> Loss of Appetite</label>
+                    <label><input type="checkbox" name="options" value="Pain During Bowel Movements"> Pain During Bowel Movements</label>
+                    <label><input type="checkbox" name="options" value="Pain in the Anal Region"> Pain in the Anal Region</label>
+                    <label><input type="checkbox" name="options" value="Bloody Stool"> Bloody Stool</label>
+                    <label><input type="checkbox" name="options" value="Irritation in Anus"> Irritation in Anus</label>
+                    <label><input type="checkbox" name="options" value="Passage of Gases"> Passage of Gases</label>
+                    <label><input type="checkbox" name="options" value="Belly Pain"> Belly Pain</label>
+                    <label><input type="checkbox" name="options" value="Swelling of Stomach"> Swelling of Stomach</label>
+                    <label><input type="checkbox" name="options" value="Distention of Abdomen"> Distention of Abdomen</label>
+                </div>
+              </details>
+              
+              <details>
+                <summary><i class="fas fa-lungs" style="color: #3498DB;"></i> Respiratory System</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Continuous Sneezing"> Continuous Sneezing</label>
+                    <label><input type="checkbox" name="options" value="Cough"> Cough</label>
+                    <label><input type="checkbox" name="options" value="Breathlessness"> Breathlessness</label>
+                    <label><input type="checkbox" name="options" value="Phlegm"> Phlegm</label>
+                    <label><input type="checkbox" name="options" value="Sinus Pressure"> Sinus Pressure</label>
+                    <label><input type="checkbox" name="options" value="Runny Nose"> Runny Nose</label>
+                    <label><input type="checkbox" name="options" value="Congestion"> Congestion</label>
+                    <label><input type="checkbox" name="options" value="Throat Irritation"> Throat Irritation</label>
+                    <label><input type="checkbox" name="options" value="Loss of Smell"> Loss of Smell</label>
+                    <label><input type="checkbox" name="options" value="Mucoid Sputum"> Mucoid Sputum</label>
+                    <label><input type="checkbox" name="options" value="Rusty Sputum"> Rusty Sputum</label>
+                </div>
+              </details>
+              
+      
+              <details>
+                <summary><i class="fas fa-vial" style="color: #27AE60;"></i>Endocrine & Metabolic Systems</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Weight Gain"> Weight Gain</label>
+                    <label><input type="checkbox" name="options" value="Weight Loss"> Weight Loss</label>
+                    <label><input type="checkbox" name="options" value="Irregular Sugar Level"> Irregular Sugar Level</label>
+                    <label><input type="checkbox" name="options" value="Lethargy"> Lethargy</label>
+                    <label><input type="checkbox" name="options" value="Fatigue"> Fatigue</label>
+                    <label><input type="checkbox" name="options" value="Cold Hands and Feet"> Cold Hands and Feet</label>
+                    <label><input type="checkbox" name="options" value="Increased Appetite"> Increased Appetite</label>
+                    <label><input type="checkbox" name="options" value="Excessive Hunger"> Excessive Hunger</label>
+                    <label><input type="checkbox" name="options" value="Obesity"> Obesity</label>
+                    <label><input type="checkbox" name="options" value="Enlarged Thyroid"> Enlarged Thyroid</label>
+                    <label><input type="checkbox" name="options" value="Brittle Nails"> Brittle Nails</label>
+                </div>
+              </details>
+              
+              <details>
+                <summary><i class="fas fa-heart" style="color: #E74C3C;"></i> Circulatory & Cardiovascular System</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Fast Heart Rate"> Fast Heart Rate</label>
+                    <label><input type="checkbox" name="options" value="Palpitations"> Palpitations</label>
+                    <label><input type="checkbox" name="options" value="Prominent Veins on Calf"> Prominent Veins on Calf</label>
+                    <label><input type="checkbox" name="options" value="Chest Pain"> Chest Pain</label>
+                    <label><input type="checkbox" name="options" value="Swollen Legs"> Swollen Legs</label>
+                    <label><input type="checkbox" name="options" value="Swollen Blood Vessels"> Swollen Blood Vessels</label>
+                    <label><input type="checkbox" name="options" value="Swollen Extremities"> Swollen Extremities</label>
+                    <label><input type="checkbox" name="options" value="Puffy Face and Eyes"> Puffy Face and Eyes</label>
+                </div>
+              </details>
+              
+              <details>
+                <summary><i class="fas fa-toilet" style="color: #16A085;"></i> Urinary System</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Burning Micturition"> Burning Micturition</label>
+                    <label><input type="checkbox" name="options" value="Spotting Urination"> Spotting Urination</label>
+                    <label><input type="checkbox" name="options" value="Dark Urine"> Dark Urine</label>
+                    <label><input type="checkbox" name="options" value="Yellow Urine"> Yellow Urine</label>
+                    <label><input type="checkbox" name="options" value="Foul Smell of Urine"> Foul Smell of Urine</label>
+                    <label><input type="checkbox" name="options" value="Bladder Discomfort"> Bladder Discomfort</label>
+                    <label><input type="checkbox" name="options" value="Continuous Feel of Urination"> Continuous Feel of Urination</label>
+                    <label><input type="checkbox" name="options" value="Polyuria"> Polyuria</label>
+                </div>
+              </details>
+              
+
+              <details>
+                <summary><i class="fas fa-shield-virus" style="color: #2ECC71;"></i>Immune System & General Symptoms</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="High Fever"> High Fever</label>
+                    <label><input type="checkbox" name="options" value="Mild Fever"> Mild Fever</label>
+                    <label><input type="checkbox" name="options" value="Chills"> Chills</label>
+                    <label><input type="checkbox" name="options" value="Shivering"> Shivering</label>
+                    <label><input type="checkbox" name="options" value="Malaise"> Malaise</label>
+                    <label><input type="checkbox" name="options" value="Sweating"> Sweating</label>
+                    <label><input type="checkbox" name="options" value="Dehydration"> Dehydration</label>
+                    <label><input type="checkbox" name="options" value="Toxic Look (Typhos)"> Toxic Look (Typhos)</label>
+                    <label><input type="checkbox" name="options" value="Sunken Eyes"> Sunken Eyes</label>
+                    <label><input type="checkbox" name="options" value="Swollen Lymph Nodes"> Swollen Lymph Nodes</label>
+                    <label><input type="checkbox" name="options" value="Family History"> Family History</label>
+                </div>
+              </details>
+              
+              <details>
+                <summary><i class="fas fa-eye" style="color: #3498DB;"></i> Vision & Eye Symptoms</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Blurred and Distorted Vision"> Blurred and Distorted Vision</label>
+                    <label><input type="checkbox" name="options" value="Redness of Eyes"> Redness of Eyes</label>
+                    <label><input type="checkbox" name="options" value="Visual Disturbances"> Visual Disturbances</label>
+                    <label><input type="checkbox" name="options" value="Yellowing of Eyes"> Yellowing of Eyes</label>
+                    <label><input type="checkbox" name="options" value="Watering from Eyes"> Watering from Eyes</label>
+                    <label><input type="checkbox" name="options" value="Pain Behind the Eyes"> Pain Behind the Eyes</label>
+                </div>
+              </details>
+            
+              <details>
+                <summary><i class="fas fa-stethoscope" style="color: #16A085;"></i>Rare or Miscellaneous Symptoms</summary>
+                <div>
+                    <label><input type="checkbox" name="options" value="Extra Marital Contacts"> Extra Marital Contacts</label>
+                    <label><input type="checkbox" name="options" value="History of Alcohol Consumption"> History of Alcohol Consumption</label>
+                    <label><input type="checkbox" name="options" value="Receiving Blood Transfusion"> Receiving Blood Transfusion</label>
+                    <label><input type="checkbox" name="options" value="Receiving Unsterile Injections"> Receiving Unsterile Injections</label>
+                    <label><input type="checkbox" name="options" value="Coma"> Coma</label>
+                    <label><input type="checkbox" name="options" value="Stomach Bleeding"> Stomach Bleeding</label>
+                    <label><input type="checkbox" name="options" value="Fluid Overload"> Fluid Overload</label>
+                    <label><input type="checkbox" name="options" value="Blood in Sputum"> Blood in Sputum</label>
+                </div>
+              </details>
+              
+              <div class="button-container">
+                <button class="predict-button">
+                    <i class="fas fa-magic"></i> Predict
+                </button>
+            </div>
+    </form>
+  </div>
+  <div class="footer">
+    <a href="#">Privacy</a>
+    <a href="#">Terms & Conditions</a>
+  </div>    
+</body>
+</html>

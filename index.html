@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Fusion - Health Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="#"><i class="fas fa-phone"></i> Contact</a>
+        <a href="#"><i class="fas fa-comment"></i> Feedback</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+    </div>
+    <!-- Floating Medical Toys -->
+    <div class="medical-toys">
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-syringe"></i>
+        <i class="fas fa-stethoscope"></i>
+        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-briefcase-medical"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-dna"></i>
+        <i class="fas fa-first-aid"></i>
+        <i class="fas fa-tablets"></i>
+        <i class="fas fa-microscope"></i>
+        <i class="fas fa-lungs"></i>
+        <i class="fas fa-x-ray"></i>
+        <i class="fas fa-vials"></i>
+        <i class="fas fa-hospital"></i>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1><i class="fas fa-stethoscope"></i> Med Fusion</h1>
+        <p>Multi-Disease Prediction Using Data Science</p>
+
+        <div class="doctor-container">
+            <img id="doctorImage" class="doctor-img" src="https://png.pngtree.com/png-clipart/20240115/original/pngtree-hospital-heart-disease-day-cardiology-3d-doctor-world-heart-disease-day-png-image_14119836.png" alt="Doctor">
+            <div id="doctorMessage" class="doctor-message">Hello! Welcome to Med Fusion.</div>
+        </div>
+
+        <a href="/register" class="cta-button">
+            <i class="fas fa-handshake" style="color: #ffdd57;"></i> Welcome
+        </a>
+    </div>
+     <div class="footer">
+        <a href="#">Privacy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+
+</body>
+</html>

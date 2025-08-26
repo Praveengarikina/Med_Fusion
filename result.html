@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+    <title>Med Fusion - Results</title>
+
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-phone"></i> Contact</a>
+        <a href="#"><i class="fas fa-comment"></i> Feedback</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+    </div>
+    <div class="medical-toys">
+        <i class="fas fa-pills"></i>
+        <i class="fas fa-syringe"></i>
+        <i class="fas fa-stethoscope"></i>
+        <i class="fas fa-heartbeat"></i>
+        <i class="fas fa-briefcase-medical"></i>
+        <i class="fas fa-thermometer"></i>
+        <i class="fas fa-dna"></i>
+        <i class="fas fa-first-aid"></i>
+        <i class="fas fa-tablets"></i>
+        <i class="fas fa-microscope"></i>
+        <i class="fas fa-lungs"></i>
+        <i class="fas fa-x-ray"></i>
+        <i class="fas fa-vials"></i>
+        <i class="fas fa-hospital"></i>
+    </div>
+    
+    <body>  
+    <div class="container2">
+            <div class="result-header">
+                <h1><i class="fas fa-stethoscope" style="color:white"; ></i> Med Fusion</h1>
+                <p class="tagline">Multi-Disease Prediction Using Data Science</p>
+            </div>
+    
+            <div class="advanced-insights">
+                <h3>
+                    <i class="fas fa-user-md" style="color:rgb(233, 122, 18);"></i> 
+                    Patient Details
+                </h3>
+                <hr>
+                <div class="card">
+                    <h2> <i class="fas fa-smile-beam" style="color:rgb(244, 237, 24);"></i> Hello, {{ name }}!</h2>
+                    <p><i class="fas fa-birthday-cake" style="color: #ff6347;"></i> <strong>Age:</strong> {{ age }}</p>
+                    <p><i class="fas fa-venus-mars" style="color: #8e44ad;"></i> <strong>Gender:</strong> {{ gender }}</p>
+                </div>
+            </div>
+    
+            <div class="advanced-insights"> 
+                <h3><i class="fas fa-user-md" style="color: #ff5733;"></i> Diagnosis Result</h3>
+                <hr>
+                <div class="card diagnosis-card">
+                    <h3 class="diagnosis-title" style="color:rgb(126, 6, 195)">
+                        <i class="fas fa-exclamation-triangle diagnosis-warning"></i> 
+                        You may have: <span>{{ prediction_text }}</span>
+                    </h3>
+                    <p class="card-text">
+                        <i class="fas fa-info-circle" style="color: #2980b9;"></i> {{ description }}
+                    </p>
+                </div>
+            </div>
+
+         <div class="advanced-insights">
+                <h3>
+                    <i class="fas fa-notes-medical" style="color: #16a085;"></i> Precautions for {{ prediction_text }}
+                </h3>
+                <hr>
+            <div class="card precaution-card"> <!-- Updated Class -->
+                    <ul class="precaution-list">
+                        {% for step, advice in precautions.items() %}
+                        <li class="precaution-item">
+                            <i class="fas fa-check-circle"></i> {{ advice }}
+                        </li>
+                            {% endfor %}
+                    </ul>
+            </div>
+        </div>
+    
+        <div class="cta-container">
+            <a href="/analyze" class="cta-button2">
+                <i class="fas fa-redo" style="color: #ff5733;"></i> Analyze Another Case
+            </a>
+            <a href="/download-report" class="cta-button2">
+                <i class="fas fa-download" style="color: #3498db;"></i> Download Report
+            </a>
+            <a href="/quiz_game" class="cta-button2">
+                <i class="fas fa-chart-line" style="color: #2ecc71;"></i> Quiz Game
+            </a>
+            <a href="/card_game" class="cta-button2">
+                <i class="fas fa-question-circle" style="color: #f1c40f;"></i> Cards Game
+            </a>
+        </div>
+        
+        
+    </div>
+        <div class="footer">
+            <a href="#">Privacy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </body>
+</html>
