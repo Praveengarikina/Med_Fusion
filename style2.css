@@ -1,0 +1,228 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74b9ff, #00cec9);
+      color: #2d3436;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      width: 450px;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #0984e3;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+  font-size: 1.3em; /* Adjust size as needed */
+  color:#f7a309; /* Red shade */
+  text-transform: uppercase; /* Optional: Makes text uppercase */
+  letter-spacing: 1.5px; /* Optional: Adds spacing between letters */
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+     .medical-toys i {
+            position: absolute;
+            font-size: 50px;
+            opacity: 0.8;
+            animation: float 10s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+        }
+
+        .fa-pills { color: #ff6b6b; }
+        .fa-syringe { color: #4CAF50; }
+        .fa-stethoscope { color: #3498db; }
+        .fa-heartbeat { color: #e74c3c; }
+        .fa-briefcase-medical { color: #f39c12; }
+        .fa-thermometer { color: #8e44ad; }
+        .fa-dna { color: #16a085; }
+        .fa-first-aid { color: #e67e22; }
+        .fa-tablets { color: #d35400; }
+        .fa-microscope { color: #c0392b; }
+        .fa-lungs { color: #2980b9; }
+        .fa-x-ray { color: #2ecc71; }
+        .fa-vials { color: #9b59b6; }
+        .fa-hospital { color: #1abc9c; }
+
+        .medical-toys i:nth-child(odd) { animation-duration: 12s; }
+        .medical-toys i:nth-child(even) { animation-duration: 8s; }
+        .medical-toys i:nth-child(3n) { animation-duration: 10s; }
+        /* .medical-toys{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        } */
+         .medical-toys i:nth-child(1) { top: 5%; left: 10%; }
+        .medical-toys i:nth-child(2) { top: 20%; right: 15%; }
+        .medical-toys i:nth-child(3) { bottom: 30%; left: 5%; }
+        .medical-toys i:nth-child(4) { bottom: 10%; right: 25%; }
+        .medical-toys i:nth-child(5) { bottom: 45%; left: 15%; }
+        .medical-toys i:nth-child(6) { top: 40%; right: 10%; }
+        .medical-toys i:nth-child(7) { bottom: 65%; left: 10%; }
+        .medical-toys i:nth-child(8) { bottom: 5%; right: 5%; }
+        .medical-toys i:nth-child(9) { top: 15%; left: 70%; }
+        .medical-toys i:nth-child(10) { top: 65%; right: 20%; }
+        .medical-toys i:nth-child(11) { top: 10%; right: 72%; }
+        .medical-toys i:nth-child(12) { bottom: 40%; right: 30%; }
+        .medical-toys i:nth-child(13) { top: 70%; left: 25%; }
+        .medical-toys i:nth-child(14) { bottom: 10%; left: 10%; }
+        .medical-toys i:nth-child(15) { top: 10%; left: 50%; }
+        .medical-toys i:nth-child(16) { bottom: 60%; right: 10%; }
+        .medical-toys i:nth-child(17) { top: 80%; left: 15%; }
+        .medical-toys i:nth-child(18) { bottom: 70%; right: 35%; } 
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-30px) rotate(10deg); opacity: 0.8; }
+            100% { transform: translateY(0) rotate(-10deg); opacity: 1; }
+        }
+
+
+    .tagline {
+      font-size: 1.1em;
+      color: #636e72;
+      margin-bottom: 20px;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    label {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .input-box {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    .input-box:focus {
+      border-color: #0984e3;
+      outline: none;
+      box-shadow: 0 0 8px rgba(9, 132, 227, 0.5);
+    }
+
+    .input-icon {
+      position: absolute;
+      right: 15px;
+      top: 45px;
+      color: #636e72;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    select:focus {
+      border-color: #0984e3;
+      outline: none;
+      box-shadow: 0 0 8px rgba(9, 132, 227, 0.5);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(45deg, #007BFF, #00cec9);
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #ff6b81, #f0932b, #fbc531);
+      transform: scale(1.05);
+    }
+
+    .navbar {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      transition: 0.3s;
+      padding: 8px 10px;
+      border-radius: 10px;
+/*      background: rgba(255, 255, 255, 0.2);*/
+      background: none;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a:hover {
+      color: #d63031;
+/*      background: rgba(255, 255, 255, 0.3);*/
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 0.9em;
+      color: white;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      color: #d63031;
+    }

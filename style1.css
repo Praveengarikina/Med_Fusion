@@ -1,0 +1,223 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #00cec9);
+            color: #2d3436;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Floating Medical Toys */
+        .medical-toys i {
+            position: absolute;
+            font-size: 50px;
+            opacity: 0.8;
+            animation: float 10s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+        }
+
+        /* Random Colors for Each Medical Toy */
+        .fa-pills { color: #ff6b6b; }
+        .fa-syringe { color: #4CAF50; }
+        .fa-stethoscope { color: #3498db; }
+        .fa-heartbeat { color: #e74c3c; }
+        .fa-briefcase-medical { color: #f39c12; }
+        .fa-thermometer { color: #8e44ad; }
+        .fa-dna { color: #16a085; }
+        .fa-first-aid { color: #e67e22; }
+        .fa-tablets { color: #d35400; }
+        .fa-microscope { color: #c0392b; }
+        .fa-lungs { color: #2980b9; }
+        .fa-x-ray { color: #2ecc71; }
+        .fa-vials { color: #9b59b6; }
+        .fa-hospital { color: #1abc9c; }
+
+        /* Position and Animation */
+        .medical-toys i:nth-child(odd) { animation-duration: 12s; }
+        .medical-toys i:nth-child(even) { animation-duration: 8s; }
+        .medical-toys i:nth-child(3n) { animation-duration: 10s; }
+
+        /* Creating Multiple Floating Toys */
+        /* .medical-toys {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        } */
+
+        /* Creating Random Positions for Toys */
+         .medical-toys i:nth-child(1) { top: 5%; left: 10%; }
+        .medical-toys i:nth-child(2) { top: 20%; right: 15%; }
+        .medical-toys i:nth-child(3) { bottom: 30%; left: 5%; }
+        .medical-toys i:nth-child(4) { bottom: 10%; right: 25%; }
+        .medical-toys i:nth-child(5) { bottom: 45%; left: 15%; }
+        .medical-toys i:nth-child(6) { top: 40%; right: 10%; }
+        .medical-toys i:nth-child(7) { bottom: 65%; left: 10%; }
+        .medical-toys i:nth-child(8) { bottom: 5%; right: 5%; }
+        .medical-toys i:nth-child(9) { top: 5%; left: 70%; }
+        .medical-toys i:nth-child(10) { top: 65%; right: 20%; }
+        .medical-toys i:nth-child(11) { top: 10%; right: 72%; }
+        .medical-toys i:nth-child(12) { bottom: 40%; right: 30%; }
+        .medical-toys i:nth-child(13) { top: 70%; left: 25%; }
+        .medical-toys i:nth-child(14) { bottom: 10%; left: 10%; }
+        .medical-toys i:nth-child(15) { top: 10%; left: 50%; }
+        .medical-toys i:nth-child(16) { bottom: 60%; right: 10%; }
+        .medical-toys i:nth-child(17) { top: 80%; left: 15%; }
+        .medical-toys i:nth-child(18) { bottom: 70%; right: 35%; } 
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-30px) rotate(10deg); opacity: 0.8; }
+            100% { transform: translateY(0) rotate(-10deg); opacity: 1; }
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(247, 244, 244);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px  rgb(66, 128, 253);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Title */
+        .container h1 {
+            font-size: 3em;
+            color: #0984e3;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Doctor Image */
+        .container img {
+            max-width: 200px;
+            margin: 20px 0;
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Call-to-Action Button */
+.cta-button {
+    padding: 14px 28px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    background: linear-gradient(135deg, #00cec9, #0984e3);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    
+    background: linear-gradient(135deg, #ff6b81, #f0932b, #fbc531);
+    transform: scale(1.05);
+}
+
+
+.doctor-container {
+            position: relative;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .doctor-img {
+            width: 100%;
+            display: block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .doctor-message {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #2d3436;
+            font-weight: bold;
+            animation: speak 3s infinite;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        @keyframes speak {
+            0%, 100% { transform: scale(0.9); }
+            50% { transform: scale(1); }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+          }
+      
+          .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            transition: 0.3s;
+            padding: 8px 10px;
+            border-radius: 10px;
+      /*      background: rgba(255, 255, 255, 0.2);*/
+            background: none;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.2);
+          }
+      
+          .navbar a:hover {
+            color: #d63031;
+      /*      background: rgba(255, 255, 255, 0.3);*/
+          }
+      
+          .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.9em;
+            color: white;
+          }
+      
+          .footer a {
+            text-decoration: none;
+            color: white;
+            margin-right: 10px;
+          }
+      
+          .footer a:hover {
+            text-decoration: underline;
+            color: #d63031;
+          }
+
+         

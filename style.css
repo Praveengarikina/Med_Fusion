@@ -1,0 +1,250 @@
+.header1{
+    text-align: center;
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .header1 h2 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  .container1{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    
+    border-color: #007BFF; /* Light blue border */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+  }
+
+  .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Style the search bar */
+#search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-color: #008BFF;
+  border-radius: 25px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Focus state for better user interaction */
+#search-bar:focus {
+  border-color: #007BFF; /* Light blue border */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Placeholder text styling */
+#search-bar::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+  pointer-events: none; /* Prevent the icon from being clickable */
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+  form {
+    display: grid;
+    gap: 15px;
+  }
+
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f9fc, #dfe9f3);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+
+  details {
+    margin: 10px ;
+    border: 1px solid #0074d9;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-width: 600px;
+    align-items: center;
+  }
+
+  details[open] {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+summary:hover {
+  background-color: #e4f3ff;
+}
+
+summary i {
+  font-size: 1.5em;
+}
+
+
+  summary {
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0074d9;
+    background-color: #f1f9ff;
+    border-bottom: 1px solid #d0e7ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    transition: background-color 0.3s ease;
+    list-style: none;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    font-size: 1em;
+    color: #0074d9;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] summary::after {
+    transform: rotate(-180deg); /* Rotates arrow upward when open */
+  }
+
+  label {
+    display: block;
+    margin: 10px 20px;
+    font-size: 1em;
+    color: #555;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  details > div {
+    padding: 10px 20px;
+    background-color: #f9fbfd;
+    color: #555;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+    padding: 8px 10px;
+    border-radius: 10px;
+/*      background: rgba(255, 255, 255, 0.2);*/
+    background: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a:hover {
+    color: #d63031;
+/*      background: rgba(255, 255, 255, 0.3);*/
+  }
+
+  .footer {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.9em;
+    color: white;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: rgb(2, 58, 118);
+    margin-right: 10px;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    color: #d63031;
+}
+
+/* Button container for proper spacing */
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Predict Button Styling */
+.predict-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Takes up full width while leaving space */
+    max-width: 1000px; /* Keeps it from being too wide */
+    gap: 12px;
+    background: linear-gradient(45deg, #007BFF, #00cec9);
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+   
+    text-transform: uppercase;
+}
+
+/* Icon Styling */
+.predict-button i {
+    font-size: 1.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Vibrant Glow */
+.predict-button:hover {
+    background: linear-gradient(135deg, #ff6b81, #f0932b, #fbc531);
+    transform: scale(1.05);
+  
+}
+
+/* Hover Effect - Icon Spin */
+.predict-button:hover i {
+    transform: rotate(360deg);
+}

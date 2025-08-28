@@ -1,0 +1,366 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #00cec9, #74b9ff);
+    color: #2d3436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.container2 {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.medical-toys {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+.medical-toys i {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.8;
+    animation: float 10s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+}
+
+.fa-pills { color: #ff6b6b; }
+.fa-syringe { color: #4CAF50; }
+.fa-stethoscope { color: #3498db; }
+.fa-heartbeat { color: #e74c3c; }
+.fa-briefcase-medical { color: #f39c12; }
+.fa-thermometer { color: #8e44ad; }
+.fa-dna { color: #16a085; }
+.fa-first-aid { color: #e67e22; }
+.fa-tablets { color: #d35400; }
+.fa-microscope { color: #c0392b; }
+.fa-lungs { color: #2980b9; }
+.fa-x-ray { color: #2ecc71; }
+.fa-vials { color: #9b59b6; }
+.fa-hospital { color: #1abc9c; }
+
+.medical-toys i:nth-child(odd) { animation-duration: 12s; }
+.medical-toys i:nth-child(even) { animation-duration: 8s; }
+.medical-toys i:nth-child(3n) { animation-duration: 10s; }
+
+
+
+.medical-toys i:nth-child(1) { top: 5%; left: 10%; }
+.medical-toys i:nth-child(2) { top: 20%; right: 15%; }
+.medical-toys i:nth-child(3) { bottom: 30%; left: 5%; }
+.medical-toys i:nth-child(4) { bottom: 10%; right: 25%; }
+.medical-toys i:nth-child(5) { bottom: 45%; left: 15%; }
+.medical-toys i:nth-child(6) { top: 40%; right: 10%; }
+.medical-toys i:nth-child(7) { bottom: 65%; left: 10%; }
+.medical-toys i:nth-child(8) { bottom: 5%; right: 5%; }
+.medical-toys i:nth-child(9) { top: 15%; left: 74%; }
+.medical-toys i:nth-child(10) { top: 65%; right: 20%; }
+.medical-toys i:nth-child(11) { top: 20%; right: 72%; }
+.medical-toys i:nth-child(12) { bottom: 40%; right: 25%; }
+.medical-toys i:nth-child(13) { top: 70%; left: 25%; }
+.medical-toys i:nth-child(14) { bottom: 10%; left: 10%; }
+.medical-toys i:nth-child(15) { top: 10%; left: 50%; }
+.medical-toys i:nth-child(16) { bottom: 60%; right: 10%; }
+.medical-toys i:nth-child(17) { top: 80%; left: 15%; }
+.medical-toys i:nth-child(18) { bottom: 70%; right: 35%; } 
+
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-30px) rotate(10deg); opacity: 0.8; }
+    100% { transform: translateY(0) rotate(-10deg); opacity: 1; }
+}
+
+h1 {
+    font-size: 2.2em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p.tagline {
+    font-size: 1.0em;
+    color: #bee6f4;
+    margin-bottom: 20px;
+}
+
+.result-header {
+            background-color: #0074d9;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+.advanced-insights {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 12px 0px 20px rgba(50, 49, 49, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.advanced-insights:hover {
+    transform: scale(1.03);
+}
+
+.advanced-insights h3 {
+    text-align: center;
+    font-size: 1.1em;
+    color: #e01f5f;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.advanced-insights hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00cec9, #0074d9);
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+
+.card {
+    background: linear-gradient(135deg, #74b9ff, #00cec9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Reduces space between elements */
+}
+
+.card h2 {
+    margin: 5px 0; /* Reduces extra margin */
+    font-size: 1.6em; /* Slightly smaller but still impactful */
+}
+
+.card p {
+    margin: 3px 0; /* Removes unnecessary spacing */
+    font-size: 1em; /* Keeps text readable but compact */
+}
+
+.card-text {
+    color: #2d3436;
+    text-align: center;
+    }
+
+.diagnosis-card {
+    background: linear-gradient(135deg, #74b9ff, #00cec9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+.diagnosis-title {
+    color: #d63031;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Precaution Card - Matching Diagnosis Card */
+.precaution-card {
+    background: linear-gradient(135deg, #74b9ff,#00cec9 ); /* Matching the Diagnosis Card */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Precaution List Styling */
+.precaution-list {
+    list-style-type: none;
+}
+
+.precaution-item {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent to blend with card */
+    border-radius: 8px;
+    margin: 5px 0;
+   font-size: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+/* Precaution Icon Styling */
+.precaution-item i {
+    margin-right: 10px;
+    color: #27ae60;
+}
+
+
+.diagnosis-warning {
+    color: #ff9800;
+}
+
+.cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cta-button2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button2 i {
+    font-size: 18px;
+}
+
+.cta-button2:nth-child(1) {
+    background: linear-gradient(135deg, #ff7e5f, #ff5733);
+}
+
+.cta-button2:nth-child(2) {
+    background: linear-gradient(135deg, #6fa3ef, #3498db);
+}
+
+.cta-button2:nth-child(3) {
+    background: linear-gradient(135deg, #58d68d, #2ecc71);
+}
+
+.cta-button2:nth-child(4) {
+    background: linear-gradient(135deg, #f7dc6f, #f1c40f);
+}
+
+.cta-button2:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+
+/* .cta-container {
+    margin-top: 10px; 
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+
+
+ .cta-button2 {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #007BFF, #00cec9);
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
+    transition: all 0.6s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cta-button2:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+.cta-button2:hover {
+      background: linear-gradient(135deg, #ff6b81, #f0932b, #fbc531);
+    transform: scale(1.05);
+  
+}
+
+.cta-button2:active {
+    transform: translateY(2px);
+}
+
+.cta-button2 i {
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta-button2:hover i {
+    transform: rotate(360deg);
+} */
+
+
+.navbar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+    padding: 8px 10px;
+    border-radius: 10px;
+
+    background: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1.5px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar a:hover {
+    color: #d63031;
+
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.9em;
+    color: white;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    color: #d63031;
+  }
+
